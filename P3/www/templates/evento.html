@@ -1,0 +1,102 @@
+{% extends "padre.html" %}
+    
+    {% block titulo %}
+        <title>{{ evento['nombre'] }}</title>
+    {% endblock %}
+
+    {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+
+    {% block central %}
+         <div id="espacioCom" class="espacioDer">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <div class="titleComentarios"><h1>COMENTARIOS</h1></div>
+
+            <div class="espacioComentarios">
+                {% if comments %}
+                        {% for i in comments %}
+
+                            <div class="comentario" id="next">
+                                <b>{{i.usuario}}</b>
+                                <p >{{i.comentario}} </p>
+                                <p class="com_fecha">{{i.fecha}}</p>
+                            </div>
+                         {% endfor %}
+                {% endif %}
+
+            </div>
+
+            <div class="comentar">
+                <h4 class="campoComentar" id="nombreCampo">Nombre </h4>
+                <div id="nom"></div><input type="text" name="nombre" id="nombre" maxlength="50" size="50">
+                
+                <h4 class="campoComentar" id="emailCampo">Email: </h4>
+                <input type="text" name="email" id="email" maxlength="70" size="50">
+
+                <h4 class="campoComentar" id="comentariosCampo">Comentario: </h4>
+                <textarea name="comentarioUsu" id="comentarioUsu" value="Escriba el comentario" rows="4" cols="45" onkeypress="comprueba(event)"></textarea>
+
+                <input type="button" onclick="publicarComentario(event)" value="Publicar"></input>
+            </div>
+            
+        </div>
+
+            <!-- Sección de información del evento-->
+            <section class="info">
+                <div class="titulo">
+                    <h1 class="nomEvento">{{ evento['nombre'] }}</h1>
+                    <h2 class="fecha"> {{ evento['fecha'] }} </h2>
+                </div>
+                <div class="informacion_clase">
+                    
+                    <p>{{ evento['descripcion'] }} </p> 
+                </div>
+
+                <div class="fotoevento">
+                    <img src={{ evento['dirPortada'] }} width="270" height="210"/>  
+                </div>
+
+                
+
+                <div class="informacion_mapa">
+                    <h3 class="tituloDir"> Dirección </h3>
+                    <p> {{ evento['direccion'] }} </p>   
+                    <br></br>
+                </div>
+
+                <div class="info_final">
+                    <h3 class="precio"> {{ evento['precio'] }}€</h3>
+
+                    <a href= {{ evento['enlace'] }} /><li class ="botonApuntarse"> Apúntate </li></a>
+
+                    <a href="evento_imprimir.php?ev=1">
+                        <img class="botonimprimir" src="images/impresora.png" >
+                    </a>
+               
+                    <span onclick="openNav()"><img class="comentarioBoton" src="images/comment.png" ></span>
+                    
+                </div>
+
+
+                <div id="galeriaFotos">
+                    <h3 class="tituloDir"> Galeria de fotos </h3>
+
+                    <div class="fotosGal">
+                    {% if imagenes %}
+                        {% for i in imagenes %}
+                            <img src={{i.dir}}  width="270" height="210" />
+                         {% endfor %}
+                    {% endif %}
+                    
+                    </div>
+
+
+                </div>
+
+
+                              
+            </section>
+
+{% endblock %}

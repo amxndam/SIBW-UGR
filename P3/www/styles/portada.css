@@ -1,0 +1,622 @@
+/* Portada.css */
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+/*FONTS*/
+h1 { font-family: Optima; font-size: 42px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 100.8px; }
+h3 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+p a{ font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+p { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+ul { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; }
+h2 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+div { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+
+
+.headline{
+  font: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; 
+  font-size: 16px; 
+  font-weight: 700; 
+  line-height: 17px; 
+}
+
+#formato{
+  width:775px; 
+  position:relative; 
+  margin:0 auto;
+}
+
+/* HEADER */
+
+#logoinicial{ 
+  width:100%; 
+  height:300px; 
+  margin-bottom: 5%; 
+  margin-left: -12%; 
+  background:url(images/circle.png) no-repeat;
+}
+
+#header{
+  margin-bottom: 50%;
+  width:100%; 
+  height:300px; 
+}
+
+#headerTitle{
+  width:740px; 
+  margin-bottom: 5%; 
+  margin-top: -35%; 
+  margin-left: 25%
+}
+
+#headerTitle h1{
+  font-size: 68px; 
+  color:#5C94A5;
+}
+
+
+#menu { 
+  width:100%; 
+  width:1000px; 
+  margin-bottom: 5%; 
+  margin-left: 12%;
+}
+
+
+/* Subtítulo de la cabcera */
+#headerSubtitle { 
+  margin-top: -5%; 
+  margin-left: 50%; 
+  margin-bottom: 10%; 
+  color: #6F6F6F;
+}
+
+#headerSubtitle p{float:left;}
+
+/* Separador */
+#separador {
+  width:100%; 
+  margin-left: -40px; 
+  margin-top:-40px
+}
+
+/* Separador2 */
+#separador2 {
+  width:100%;
+  margin-left: -240px; 
+  margin-top:200px; 
+  margin-bottom:-50px;
+  height:-110px
+}
+
+
+/*Botones menú */
+.boton {
+  color: #5C94A5;
+  padding: 0.8rem 2rem;
+  margin: 20px;
+  margin-right: 5px;
+  outline: none;
+  display: inline-flex;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+
+.boton:hover {
+    color: #C1A176;
+    transition: all 0.4s ease 0s;
+}
+
+
+
+
+/*Panel izquierdo*/
+#panelIzq{
+  width: 100%;
+  width: 250px;
+  margin-left: -35%;
+  background-color: #EEEEEE;
+  border: 3px solid #5C94A5;
+  min-height:300px;
+  min-width: 30px;
+  text-align: center;
+  padding: 0;
+  float: left;
+}
+
+#panelIzq h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #5C94A5;
+    color: #F6F6EB;
+} 
+
+
+#panelIzq a:hover {
+    color: #5C94A5;
+}
+
+
+/*Línea de puntos*/
+hr.lineaPuntos {
+  border-top: 3px dotted #bbb;
+
+}
+
+/*Panel de eventos*/
+#eventos{
+  width: 100%;
+  float: left;
+    
+}
+
+.panelPrincipal{
+  width: 100%;
+  width: 950px;
+
+}
+
+/*Evento*/
+.evento {
+    width: 25%;
+    float: left;
+    text-align: center;
+    margin-right: 50px;
+}
+
+.evento img{
+    width: 100%;
+    margin: 10%;
+    
+}
+
+.evento h3{
+    text-align: center;
+    font-weight: bold;
+    margin-left:45px;
+}
+
+/*Centrar*/
+#center { 
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 50%;
+}
+
+/*Para regresar al comienzo de la página*/
+.arriba{
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  padding: 1em;
+}
+.arriba:hover {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  padding: 1em;
+}
+
+
+/*Footer*/
+#footer{
+  text-align: center; 
+  margin-top:1000px; 
+  height:48px; 
+  clear:both; 
+  width:775px; 
+  border-top:#5C94A5 4px solid;
+}
+
+#footer p{
+  padding: 10px 0 0 0; 
+  font:10px/14px Optima, sans-serif; 
+  font-weight:normal; 
+  text-align:center; 
+  color:#000000;
+}
+
+#footer p a{
+  font:14px Optima, sans-serif; 
+  font-weight:normal; 
+  color:#000000; 
+  text-decoration:none; 
+  padding: 0 3px 
+}
+
+#footer p a:hover{
+  text-decoration:underline; 
+  color:#000000;
+}
+
+#footer h3{
+  height: 60px;
+  color: #070000;
+  text-align: center
+}
+
+#contactanos{
+  margin-bottom:-100px; 
+  margin-top:5px
+}
+
+#telefono{
+  margin-bottom:-35px; 
+  margin-top:65px
+}
+
+#facebook{
+  width:35px; 
+  height:35px
+}
+
+#twitter{
+  width:35px; 
+  height:35px
+}
+
+#instagram{
+  width:40px; 
+  height:40px;
+}
+
+#licencia{margin-top:10px}
+
+
+/*evento.html*/
+
+/*Nombre evento */
+.nomEvento{
+  margin-bottom: 30px;
+}
+
+/*Botón para apuntarse a la clase*/
+.botonApuntarse {
+  color: #5C94A5;
+  border: 3px solid #5C94A5;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+  margin-top: 20px; 
+  margin-left: 7px; 
+  float: left;
+  outline: none;
+  display: inline-flex;
+  font-weight: bold;
+}
+
+
+.botonApuntarse:hover {
+    color: #A4A4A4;
+    border-color: #A4A4A4;
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.info_final{
+  margin-top: -5%;
+  margin-bottom: 5%;
+
+}
+
+.fotosGal{
+  width:100%;
+  margin-top: 2%;
+
+
+}
+
+.info{
+
+  margin-left:70px;
+}
+
+/*Fecha de la clase*/
+.fecha{
+  color: #6F6F6F; 
+  margin-top: -40px; 
+  margin-left: 10px;
+}
+
+/*Precio de la clase*/
+.precio{
+  color: #5C94A5; 
+  font-size: 30px; 
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+
+/*Información de la clase*/
+.informacion_clase {
+    width: 45%;
+    padding: 2%;
+    margin-left:-5px;
+    float: left;
+}
+
+/*Foto de la clase*/
+.fotoevento{width: 100%}
+
+
+/*Dirección de la clase*/
+.informacion_mapa {
+    width: 100%;
+    float: left;
+    margin-left: 10px;
+    
+}
+
+
+/*Título de la dirección*/
+.tituloDir{
+  color:#5C94A5; 
+  font-size: 18px;
+}
+
+/*Botón para imprimir la información*/
+.botonimprimir{
+  width: 50px; 
+  height: 50px; 
+  margin-top: 20px; 
+  margin-left: 40px;
+  float: left
+}
+
+.botonimprimir:hover{
+  filter:invert(50%);
+  transition: 0.1s;
+}
+
+
+/************************************************* evento_imprimir.html *****************************************/
+
+#logoimprimir{ 
+  width:1000px; 
+  height:300px; 
+  margin-left:32%;
+}
+
+#headerTitleImp {
+  margin-left: 10%;
+
+}
+
+#fechaImp {
+  font-family: Arial, sans-serif;
+  color:black;
+  margin-top: -15px;
+  margin-left: 10px;
+
+}
+
+#informacion_claseImp{
+  font-family: Arial, sans-serif;
+  width: 45%;
+  padding: 2%;
+  margin-left:-5px;
+  float: left;
+
+}
+
+#headerTitleImp h1{
+  font-size: 26px;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin-left: 22%;
+  margin-top: -10%;
+
+}
+
+#nomEventoImp{
+  font-family: Arial, sans-serif;
+  font-size: 35px;
+
+}
+
+
+.precio_imp{
+  font-size: 30px; 
+  margin-top: 50px; 
+  margin-left: 10px; 
+  color: black; 
+  font-family: Arial, 
+  sans-serif;
+}
+
+.tituloDir_imp{ 
+  color:black; 
+  font-family: Arial;
+  sans-serif;
+}
+
+
+
+
+/**************** Adaptación del media con pantallas más pequeñas *************************************/
+@media only screen and (max-width: 1300px){
+
+ .panelPrincipal{
+  width: 75%;
+  float: right;
+
+  }
+
+  .arriba{
+   width: 10%;
+   margin-right: 5%;
+  }
+
+
+  #headerSubtitle{
+    margin-left: 40%;
+  }
+
+  .evento h3{
+    font-size: 12px;
+  }
+
+  .boton {
+    color: #5C94A5;
+    padding: 0.8rem 2rem;
+    margin: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+  }
+
+
+  #panelIzq{
+    width: 20%;
+    margin-left: 10px;
+  }
+
+  #headerTitle{
+    width: 60%;
+  }
+
+  #menu{ 
+    width:80%; 
+  }
+
+
+  #headerTitle h1{
+    font-size: 55px;
+  }
+
+  #separador{
+    margin-left: 230px;
+
+  }
+
+  #separador2{
+    margin-left: -170px;
+
+  }
+
+  #footer{
+    width: 75%;
+    bottom: 600px;
+    margin-left: 40px;
+
+  }
+
+}
+
+
+
+
+/**************** P2 *********************/
+
+
+/*Botón de comentar*/
+
+.comentarioBoton{
+  width: 8%;
+  margin-left: 30px;
+  margin-top: 18px;
+}
+
+.comentarioBoton:hover{
+  filter:invert(50%);
+  transition: 0.1s;
+}
+
+
+/*Espacio de comentarios */
+.espacioDer {
+    height: 100%;
+    color: black;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #E0F2F7;
+    overflow-x: hidden; 
+    padding-top: 60px;
+    transition: 0.4s;
+}
+
+.espacioDer .closebtn {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    font-size: 40px;
+    margin-right: 50px;
+    color: #D6A470;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .espacioDer {padding-top: 15px;}
+    .espacioDer a {font-size: 18px;}
+}
+
+
+/*Título de comentarios*/
+
+.titleComentarios{
+  font-size: 40px;
+  color: #5C94A5;
+  margin-left: 75px;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+
+/*Formato de comentario*/
+
+.comentario{
+  font-size: 0.7em;
+  padding: 2%;
+  border: 1px solid #5C94A5;
+  border-radius: 2%;
+  margin: 5%;
+
+}
+
+
+/*Formato de zona de comentario*/
+
+.espacioComentarios{
+  width: 100%;
+  overflow-y: auto;
+  height: 40%;
+}
+
+
+/*Formato de la fecha*/
+
+.com_fecha{
+  color: #2E2E2E ;
+  font-size: 11px;
+
+}
+
+/*Formato zona para comentar*/
+.comentar {
+  padding-left: 7%;
+  position: relative;
+  width: 100%;
+  top:18px;
+}
+
+.campoComentar {
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  margin-top: 20px; 
+}
+
+
