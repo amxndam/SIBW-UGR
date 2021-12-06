@@ -1,0 +1,532 @@
+/* Portada.css */
+
+*{
+  margin: 0;
+  padding: 0;
+
+}
+
+h1 { font-family: Optima; font-size: 42px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 100.8px; }
+h3 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+p a{ font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+p { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; }
+ul { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; }
+h2 { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; }
+div { font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; }
+
+.headline{font: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 16px; font-weight: 700; line-height: 17px; }
+
+#formato{width:775px; position:relative; margin:0 auto;}
+
+/* HEADER */
+
+#logoinicial{ width:100%; height:300px; left:-200px; position:relative; background:url(images/circle.png) no-repeat}
+
+#header{width:100%; height:300px; position:relative}
+
+#headerTitle{position:absolute; top:5px; left:140px; width:740px}
+#headerTitle h1{font-size: 68px; color:#5C94A5;}
+
+
+
+#menu {position:absolute; top:170px; left:20px; width:1000px}
+#menu li{height:50px; margin-right:30px; float:left}
+#menu li a:hover{height:50px;}
+
+
+
+/* Subtítulo de la cabcera */
+#headerSubtitle { margin-top:-170px; color: #6F6F6F;}
+#headerSubtitle p{float:left; margin-left:300px; margin-right:9px; width:1000px}
+
+/* Separador */
+#separador {width:100%; margin-left: -40px; margin-top:-40px}
+
+/* Separador2 */
+#separador2 {width:100%;margin-left: -240px; margin-top:200px; margin-bottom:-50px;height:-110px}
+
+
+/*Botones menú */
+.botonInicio {
+  background:url(images/inicio.png);
+  background-size: cover; 
+  background-position: 5545px 1800px;
+  width: 120px; 
+  height: 240px;
+  padding: 1rem 2rem;
+  margin: 20px;
+  outline: none;
+  display: inline-flex;
+}
+
+
+.botonInicio:hover {
+  background:url(images/inicio1.png);
+  background-size: cover; 
+  background-position: 5550px 1796px;
+  width: 120px; 
+  height: 240px;
+  padding: 1rem 2rem;
+  margin: 20px;
+  outline: none;
+  display: inline-flex;
+}
+
+
+
+ .botonClases{
+  background:url(images/clases.png) ;
+  background-size: cover; 
+  background-position: 0px 1995px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -55px;
+
+
+
+  outline: none;
+  display: inline-flex;
+}
+
+.botonClases:hover{
+  background:url(images/clases1.png);
+  background-size: cover; 
+  background-position: 0px 1991px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -55px;
+
+  outline: none;
+  display: inline-flex;
+
+}
+
+
+ .botonFotos{
+  background:url(images/fotos.png) ;
+  background-size: cover; 
+  background-position: 0px 1995px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -10px;
+
+
+  outline: none;
+  display: inline-flex;
+}
+
+.botonFotos:hover{
+  background:url(images/fotos1.png);
+  background-size: cover; 
+  background-position: 0px 1991px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -10px;
+
+
+  outline: none;
+  display: inline-flex;
+
+}
+
+
+
+ .botonSobreNosotros{
+  background:url(images/sobrenosotros.png) ;
+  background-size: cover; 
+  background-position: 0px 1980px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -35px;
+
+
+  outline: none;
+  display: inline-flex;
+}
+
+.botonSobreNosotros:hover{
+  background:url(images/sobrenosotros1.png);
+  background-size: cover; 
+  background-position: 0px 1976px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -35px;
+
+
+  outline: none;
+  display: inline-flex;
+
+}
+
+
+
+ .botonContacto{
+  background:url(images/contacto.png) ;
+  background-size: cover; 
+  background-position: 0px 1980px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -10px;
+
+  outline: none;
+  display: inline-flex;
+}
+
+.botonContacto:hover{
+  background:url(images/contacto1.png);
+  background-size: cover; 
+  background-position: 0px 1976px;
+  width: 70px; 
+  height: 125px;
+  padding: 1rem 2rem;
+  margin-left: -10px;
+
+  outline: none;
+  display: inline-flex;
+}
+
+
+
+
+/*Panel izquierdo*/
+#panelIzq{
+  margin-left: -400px;
+  background-color: #EEEEEE;
+  border: 3px solid #5C94A5;
+  width: 15%;
+  min-height: 300px;
+  min-width: 300px;
+  text-align: center;
+  padding: 0;
+  float: left;
+  font: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 14px; font-weight: 700; line-height: 20px;
+}
+
+#panelIzq h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    background-color: #5C94A5;
+    color: #F6F6EB;
+    font: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif; font-size: 16px; font-weight: 700; line-height: 20px;
+} 
+
+#panelIzq a:hover {
+    color: #5C94A5;
+}
+
+
+/*Línea de puntos*/
+hr.lineaPuntos {
+  border-top: 3px dotted #bbb;
+
+}
+
+/*Panel de eventos*/
+#eventos{
+  width: 75%;
+  float: right;
+    
+   
+
+}
+
+/*Evento*/
+.evento {
+    width: 30%;
+    float: left;
+    text-align: center;
+    
+}
+
+.evento img{
+    width: 100%;
+    padding: 0;
+    margin: 10%;
+    
+}
+
+.evento h3{
+    text-align: center;
+    font-weight: bold;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    margin-left:45px;
+}
+
+/*Centrar*/
+#center { display: block; margin-left: auto; margin-right: auto; width: 50%}
+
+/*Para regresar al comienzo de la página*/
+.arriba{
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  padding: 1em;
+}
+.arriba:hover {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  text-decoration: none;
+  padding: 1em;
+}
+
+
+/*Footer*/
+#footer{text-align: center; margin-top:1000px; height:48px; clear:both; width:775px; border-top:#5C94A5 4px solid}
+#footer p{padding: 10px 0 0 0; font:10px/14px Optima, sans-serif; font-weight:normal; text-align:center; color:#000000;}
+#footer p a{font:14px Optima, sans-serif; font-weight:normal; color:#000000; text-decoration:none; padding: 0 3px }
+#footer p a:hover{text-decoration:underline; color:#000000}
+#footer h3{height: 60px;color: #070000;text-align: center}
+
+.contactanos{margin-bottom:-100px; margin-top:5px}
+.telefono{margin-bottom:-35px; margin-top:65px}
+.facebook{width:35px; height:35px}
+.twitter{width:35px; height:35px}
+.instagram{width:40px; height:40px;}
+
+
+/*evento.html*/
+
+
+/*Botón para apuntarse a la clase*/
+.botonApuntarse {
+  color: #5C94A5;
+  border: 3px solid #5C94A5;
+  border-radius: 5px;
+  padding: 0.8rem 1.2rem;
+  margin-top: 20px; 
+  margin-left: 7px; 
+  float: left;
+  outline: none;
+  display: inline-flex;
+  font-weight: bold;
+}
+
+
+.botonApuntarse:hover {
+    color: #A4A4A4;
+    border-color: #A4A4A4;
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+/*Fecha de la clase*/
+.fecha{color: #6F6F6F; margin-top: -20px; margin-left: 10px}
+
+/*Precio de la clase*/
+.precio{color: #5C94A5; font-size: 30px; margin-top: 50px; margin-left: 10px}
+
+
+/*Información de la clase*/
+.informacion_clase {
+    width: 45%;
+    padding: 2%;
+    margin-left:-5px;
+    float: left;
+}
+
+/*Foto de la clase*/
+.fotoevento{width: 45%; padding: 2%; margin-left:10px; margin-top: 15px; float: right;}
+
+/*Mapa de la localización de la clase*/
+.mapa{width:400px; height:350px;margin-top:50px;}
+
+/*Dirección de la clase*/
+.informacion_mapa {
+    width: 45%;
+    margin-top: -350px;
+    float: right;
+    
+}
+
+/*Título de la dirección*/
+.tituloDir{color:#5C94A5; font-size: 18px;}
+
+/*Botón para imprimir la información*/
+.botonimprimir{
+  width: 50px; 
+  height: 50px; 
+  margin-top: 20px; 
+  margin-left: 40px;
+  float: left
+}
+
+.botonimprimir:hover{
+  filter:invert(50%);
+  transition: 0.1s;
+}
+
+
+/*evento_imprimir.html*/
+
+#logoimprimir{ width:1000px; height:300px; left:200px; position:relative; background:url(images/circle.png) no-repeat}
+
+
+.precio_imp{font-size: 30px; margin-top: 50px; margin-left: 10px}
+
+.tituloDir_imp{ font-size: 18px;}
+
+
+
+
+/*Adaptación del media con pantallas más pequeñas*/
+@media only screen and (max-width: 1115px){
+
+  #eventos{
+  width: 100%;
+  margin-right: -400px;
+  margin-top: 60px;
+  margin-bottom: 600px;
+
+ }
+
+
+  #panelIzq{
+    width: 100%;
+    margin-left: 300px;
+  }
+
+  #header{
+    margin-left: 400px;
+
+  }
+
+  #separador{
+    margin-left: 230px;
+
+  }
+
+  #separador2{
+    margin-left: -170px;
+
+  }
+
+  #footer{
+    width: 180%;
+    bottom: 600px;
+    margin-left: 40px;
+
+  }
+
+}
+
+
+
+
+/**************** P2 *********************/
+
+
+/*Botón de comentar*/
+
+.comentarioBoton{
+  width: 8%;
+  margin-left: 30px;
+  margin-top: 18px;
+}
+
+.comentarioBoton:hover{
+  filter:invert(50%);
+  transition: 0.1s;
+}
+
+
+/*Espacio de comentarios */
+.espacioDer {
+    height: 100%;
+    color: black;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #E0F2F7;
+    overflow-x: hidden; 
+    padding-top: 60px;
+    transition: 0.4s;
+}
+
+.espacioDer .closebtn {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    font-size: 40px;
+    margin-right: 50px;
+    color: #D6A470;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+    .espacioDer {padding-top: 15px;}
+    .espacioDer a {font-size: 18px;}
+}
+
+
+/*Título de comentarios*/
+
+.titleComentarios{
+  font-size: 40px;
+  color: #5C94A5;
+  margin-left: 75px;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+
+
+/*Formato de comentario*/
+
+.comentario{
+  font-size: 0.7em;
+  padding: 2%;
+  border: 1px solid #5C94A5;
+  border-radius: 2%;
+  margin: 5%;
+
+}
+
+
+/*Formato de zona de comentario*/
+
+.espacioComentarios{
+  width: 100%;
+  overflow-y: auto;
+  height: 40%;
+}
+
+
+/*Formato de la fecha*/
+
+.com_fecha{
+  color: #2E2E2E ;
+  font-size: 11px;
+
+}
+
+/*Formato zona para comentar*/
+.comentar {
+  padding-left: 7%;
+  position: relative;
+  width: 100%;
+  top:18px;
+}
+
+.campoComentar {
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  margin-top: 20px; 
+}
+
+
