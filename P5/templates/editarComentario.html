@@ -1,0 +1,40 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Edición comentario </title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		
+	    <div class="formulario">
+	    	<div id = "panelComment">
+	        <h2 class="eventoEditar"> Comentario de {{ comment['id'] }} </h2>
+	            		<div class="comentarioEd">
+			                <div class="comentario" id="ultimo_comentario">
+			                    
+			                    <form action="editarComentario.php?comment={{comment['id']}}" method="post" >
+			                    	<input type="text"  name="nuevoComment" id="nuevoComment" maxlength="100" size="30" value="{{ comment['comentario'] }}">
+
+			                    	<input type="submit" value="Editar">
+
+			                     </form>
+
+			                </div>
+		                
+	    				</div>
+
+			</div>
+
+	    
+		</div>
+
+
+
+
+
+
+	{% endblock %}

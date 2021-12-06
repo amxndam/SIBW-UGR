@@ -1,0 +1,137 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Mi perfil</title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+
+		{% if usuario %}
+
+			<div class="formulario">
+					<h3 class="tituloDir"> DATOS DEL USUARIO </h3>
+					<br></br>
+					<h3  >Nombre: {{ usuario['nombre'] }} </h3>
+					<h3  >Email: {{ usuario['email'] }} </h3>
+					<h3 >Tipo: {{ usuario['tipo'] }} </h3>
+					<br></br>
+					<hr size="5" width="100%" color="#cbd1cc"> 
+					<br></br>
+
+					<h3 class="tituloDir"> MODIFICAR DATOS </h3>
+					<br></br>
+
+			        <form action="editarUsuario.php" method="post" >
+			            <h3 class="tituloVar">Nombre:</h3>
+			            <input class= "introducirInfo" type="text"  name="nombreNuevo" id="nombreNuevo" maxlength="100" size="60" >
+
+			            <h3 class="tituloVar">Email:</h3>
+			            <input class= "introducirInfo" type="email"  name="emailNuevo" id="emailNuevo" maxlength="100" size="60" >
+
+			            <h3 class="tituloVar">Contraseña: </h3>
+			            <input class= "introducirInfo" type="password" name="passwordNueva" id="passwordNueva" maxlength="100" size="60">
+
+			            {% if msg %}
+
+							<div class="msg">
+							        {{ msg }}
+							</div>
+						{% endif %}
+				
+			            <br></br>
+			            <input class="botonModificar" type="submit" value="Modificar">
+			            
+			         </form> 
+
+
+
+			         <br></br>
+			    	<br></br>
+			    	<br></br>
+			    	<br></br>
+			    	<br></br>
+			        
+			</div>
+
+			    
+
+
+
+
+
+				{% if usuario['tipo'] == "moderador" %}
+
+					<div class="boton">
+				        <form action="moderadorComentarios.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar Comentarios">
+				         </form> 
+			        </div>
+
+				{% endif %}
+
+
+				{% if usuario['tipo'] == "gestor" %}
+
+					<div class= "botonPerfil">
+				        <form action="moderadorEventos.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar eventos">
+				         </form> 
+			        </div>
+
+				{% endif %}
+
+
+
+				{% if usuario['tipo'] == "superusuario" %}
+
+				<div id= "opSuper">
+					<br></br>
+					<div class="boton">
+					        <form action="moderadorComentarios.php" method="post" >
+					            <input  class="boton" type="submit" value="Gestionar Comentarios">
+					         </form> 
+				        </div>
+
+				        <br></br>
+
+					<div class="boton">
+					        <form action="moderadorEventos.php" method="post" >
+					            <input  class="boton" type="submit" value="Gestionar eventos">
+					         </form> 
+				        </div>
+
+				        <br></br>
+
+					<div class="boton">
+				        <form action="moderadorUsuarios.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar usuarios">
+				         </form> 
+			        </div>
+
+			     </div>
+
+				{% endif %}
+
+
+
+
+
+
+		{% else %}
+				<h3> Debe de iniciar sesión para acceder a esta sección </h3>
+		{% endif %}
+
+
+
+		
+
+
+
+
+
+
+	{% endblock %}

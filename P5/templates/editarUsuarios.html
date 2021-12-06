@@ -1,0 +1,57 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Edición de usuarios </title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		
+	    <h3 class="listaEventosTitulo"> LISTA USUARIOS </h3>
+
+
+	    {% for value in usuarios %}
+	    <div class="formulario">
+	    	<div id = "panelComment">
+	        <h2 class="eventoEditar"> Usuario {{ value.nombre }}</h2>
+
+		                    <form action="editarUsuarios.php?us={{ value.nombre }} " method="post" >
+
+		                    	<h3 class="categoriaNombre">Tipo: {{ value.tipo }} </h3>
+		                    	<br></br>
+
+		                    	<h3 class="categoriaNombre">Nuevo tipo:  </h3>
+		                    	<br></br>
+		                    	<select name="nuevoTipo" id="nuevoTipo" multiple>
+							    <option value="registrado">Registrado</option>
+							    <option value="moderador">Moderador</option>
+							    <option value="gestor">Gestor</option>
+							    <option value="superusuario">Superusuario</option>
+							  </select>
+
+							  <br></br>
+		                    	<input type="submit" value="Editar">
+
+		                     </form>
+
+
+
+	     
+	</div>
+
+
+	    
+</div>
+{% endfor %}
+
+
+
+
+
+
+
+
+	{% endblock %}

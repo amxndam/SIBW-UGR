@@ -1,0 +1,64 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Edición de comentarios </title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		
+	    <h3 class="listaEventosTitulo">LISTA EVENTOS </h3>
+
+	    {% for value in eventos %}
+	    <div class="formulario">
+	    	<div id = "panelComment">
+	        <h2 class="eventoEditar"> Evento {{ value.id }}: {{ value.nombre }}</h2>
+	        <div id="comentarioEv">
+	        {% for i in comentarios %}
+	            {% if i.evento == value.id%}
+
+
+	            		<div class="comentarioEd">
+		                <div class="comentario" id="ultimo_comentario">
+		                    <h3>{{ i.usuario }}</h3>
+		                    <h4 class="com_fecha">{{ i.fecha }}</h4>
+
+		                    <form action="editarComentarios.php?ev={{ value.id }}&c={{i.id}}&op={{0}} " method="post" >
+		                    	<input type="text"  name="nuevoComentario" id="nuevoComentario" maxlength="100" size="30" value="{{ i.comentario }}">
+
+		                    	<input type="submit" value="Editar" src="images/editar.png">
+
+		                     </form>
+
+			                <form action="editarComentarios.php?ev={{ value.id }}&c={{i.id}}&op={{1}} " method="post" >
+		
+		                    	<input type="submit" value="Eliminar" src="images/eliminar.png">
+
+		                     </form>
+
+		                </div>
+		                </div>
+	            		  
+		                
+
+	            	
+	                
+	            {% endif %}
+	        {% endfor %}
+	    </div>
+
+	</div>
+
+	    
+</div>
+{% endfor %}
+
+
+
+
+
+
+	{% endblock %}

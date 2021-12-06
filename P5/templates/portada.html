@@ -1,0 +1,28 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Breaking Ceramics</title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		  		<section id="eventos">
+
+	                {% for i in eventos %}
+	                {% if i.publicado == "1" or usuario['tipo'] == "gestor" or usuario['tipo'] == "superusuario" %}
+					<div class="evento">
+						<img src={{i.dirPortada}} alt={{i.nombre}}>
+						<a href="evento.php?ev={{i.id}}"><h3 align="center">{{i.nombre}}</h3> </a>
+
+					</div>
+					{% endif %}
+					{% endfor %}
+
+
+	            </section>
+
+
+	{% endblock %}
