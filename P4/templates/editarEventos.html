@@ -1,0 +1,119 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Edición de eventos </title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		
+	    <h3 class="listaEventosTitulo"> LISTA EVENTOS </h3>
+
+
+
+	    {% for value in eventos %}
+	    <div class="formulario">
+	    	<div id = "panelComment">
+	        <h2 class="eventoEditar"> Evento {{ value.nombre }}</h2>
+
+
+
+		                    <form action="editarEventos.php?ev={{ value.id }}&op={{0}} " method="post" >
+
+		                    	<h3 class="categoriaNombre">Nombre: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevoNombre" id="nuevoNombre" maxlength="100" size="30" value="{{ value.nombre }}">
+
+		                    	<h3 class="categoriaEditar">Lugar: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevoLugar" id="nuevoLugar" maxlength="100" size="30" value="{{ value.lugar }}">
+
+
+		                    	<h3 class="categoriaEditar">Fecha: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevaFecha" id="nuevaFecha" maxlength="100" size="30" value="{{ value.fecha }}">
+
+		                    	<h3 class="categoriaEditar">Hora: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevaHora" id="nuevaHora" maxlength="100" size="30" value="{{ value.hora }}">
+
+		                    	<h3 class="categoriaEditar">Precio: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevoPrecio" id="nuevoPrecio" maxlength="100" size="30" value="{{ value.precio }}">
+
+		                    	<h3 class="categoriaEditar">Enlace: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevoEnlace" id="nuevoEnlace" maxlength="100" size="30" value="{{ value.enlace }}">
+
+		                    	<h3 class="categoriaEditar">Dirección: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevaDireccion" id="nuevaDireccion" maxlength="100" size="30" value="{{ value.direccion }}">
+
+		                    	<h3 class="categoriaEditar">Descripción: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="nuevaDescripcion" id="nuevaDescripcion" maxlength="100" size="30" value="{{ value.descripcion }}">
+
+		                    	<h3 class="categoriaEditar">dirPortada: </h3>
+		                    	<img src="{{ value.dirPortada }}" width="50%px" />
+		                    	<input class= "introducirInfo" type="text"  name="nuevaPortada" id="nuevaPortada" maxlength="100" size="30" >
+
+		                    	<input type="submit" value="Editar" src="images/editar.png">
+
+		                     </form>
+
+			                <form action="editarEventos.php?ev={{ value.id }}&op={{1}} " method="post" >
+		
+		                    	<input type="submit" value="Eliminar" src="images/eliminar.png">
+
+		                     </form>
+
+
+	     
+	</div>
+
+
+	    
+</div>
+{% endfor %}
+		
+		
+		<div id = "panelAddEvent">
+			<h2 class="eventoEditar"> AÑADIR EVENTO</h2>
+	    <form action="editarEventos.php?ev={{ value.id }}&op={{2}} " method="post" >
+
+	    						<h3 class="categoriaNombreAdd">Nombre: </h3>
+		                    	<input type="text"  name="nombre" id="nombre" maxlength="100" size="30" >
+
+		                    	<h3 class="categoriaEditar">Lugar: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="lugar" id="lugar" maxlength="100" size="30" >
+
+
+		                    	<h3 class="categoriaEditar">Fecha: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="fecha" id="fecha" maxlength="100" size="30">
+
+		                    	<h3 class="categoriaEditar">Hora: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="hora" id="hora" maxlength="100" size="30">
+
+		                    	<h3 class="categoriaEditar">Precio: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="precio" id="precio" maxlength="100" size="30" >
+
+		                    	<h3 class="categoriaEditar">Enlace: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="enlace" id="enlace" maxlength="100" size="30" >
+
+		                    	<h3 class="categoriaEditar">Dirección: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="direccion" id="direccion" maxlength="100" size="30" >
+
+		                    	<h3 class="categoriaEditar">Descripción: </h3>
+		                    	<input class= "introducirInfo" type="text"  name="descripcion" id="descripcion" maxlength="100" size="30" >
+
+		                    	<h3 class="categoriaEditar">dirPortada: </h3>
+		                    	<img src="{{ value.dirPortada }}" width="50%px" />
+		                    	<input class= "introducirInfo" type="text"  name="dirPortada" id="dirPortada" maxlength="100" size="30" >
+		
+		    <input type="submit" value="Añadir">
+
+		</form>
+
+	</div>
+
+
+
+
+
+
+	{% endblock %}

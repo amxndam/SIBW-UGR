@@ -1,0 +1,85 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Inicio sesión</title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+
+    {% block header %}
+
+    <!-- Cabecera de la página-->
+			<head id="header">
+				
+
+				<!-- Logo-->
+				<div id="logoinicial"> 
+			 		<a href="index.php"> <img  src="images/logo2.gif" width="270" height="210" alt="" /> </a> 
+			 	</div> 
+
+			 	<!-- Título-->
+			 	<div id="headerTitle"> 
+			 		<h1 > Breaking Ceramics </h1> 
+
+			 	</div> 
+
+			 	<!-- Subtítulo-->
+			 	<div id="headerSubtitle">
+		        <p><span class="headline"> 
+		        	Eventos de cerámica en Granada
+		   		 </div>
+				 
+			  
+		    </head>
+
+    {% endblock %}
+
+    {% block panelIzq %}
+	{% endblock %}
+	
+	{% block central %}
+	
+
+
+	<body>
+
+		<div id="centrarDatos">
+			<h3 class="listaEventosTitulo">REGISTRO </h3>
+
+			<div class="introducirDatos">
+			    <form action="registro.php" method="post" >
+			        <h6 class="tipoDato">Nombre: </h6>
+			        <input type="text" name="registroNombre" id="registroNombre" maxlength="50" size="50"required>
+
+			        <h6 class="tipoDato">Email: </h6>
+			        <input type="email"name="registroEmail" id="registroEmail" maxlength="70" size="50" >
+
+			        <h6 class="tipoDato">Contraseña: </h6>
+			        <input type="password" name="registroContraseña" id="registroContraseña" maxlength="50" size="50">
+			        <br></br>
+			        <input type="submit" value="Registrarse">
+			    </form>
+			</div>
+
+			<h3 class="listaEventosTitulo">INICIO DE SESIÓN </h3>
+
+		    <div class="introducirDatos">
+		    <form action="login.php" method="post" >
+		        <h6 class="tipoDato">Nombre: </h6>
+		        <input type="text" name="loginNombre" id="loginNombre" maxlength="50" size="50"required>
+
+		        <h6 class="tipoDato">Contraseña: </h6>
+		        <input type="password" name="loginPassword" id="loginPassword" maxlength="50" size="50"required>
+		        <br></br>
+		        <input type="submit" value="Iniciar sesión">
+		    </form>
+			</div>
+
+	</div>
+       
+	</body>
+
+
+{% endblock %}

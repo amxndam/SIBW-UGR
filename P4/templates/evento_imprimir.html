@@ -1,0 +1,101 @@
+{% extends "padre.html" %}
+    
+    {% block titulo %}
+        <title>Imprimir: {{ evento['nombre'] }}</title>
+    {% endblock %}
+
+    {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+
+    {% block fondo %}
+        <!-- Imagen de fondo-->
+        <style>
+            body{
+                background-color: white;
+            }
+        </style>
+    {% endblock %}
+
+    {% block header %}
+            <!-- Cabecera de la página-->
+            <head id="header">
+
+                <!-- Logo-->
+                <div id="logoimprimir"> 
+                    <a href="index.php"> <img  src="images/jarron.png" width="270" height="210" alt="" /> </a> 
+                </div> 
+
+                <!-- Título-->
+                <div id="headerTitleImp"> 
+                    <h1 > Breaking Ceramics </h1> 
+
+                </div> 
+                 
+            </head>
+
+    {% endblock %}
+
+    
+    {% block panelIzq %}
+
+
+    {% endblock %}
+
+    {% block central %}
+
+
+            <!-- Sección de información del evento-->
+            <section class="info">
+                <div class="titulo">
+                    <h1 id="nomEventoImp">{{ evento['nombre'] }}</h1>
+                    <h2 id="fechaImp"> {{ evento['fecha'] }} {{ evento['hora'] }} </h2>
+                </div>
+                <div id="informacion_claseImp">
+                    
+                    <p>{{ evento['descripcion'] }} </p> 
+                </div>
+
+                <div class="fotoevento">
+                    <img src={{ evento['dirPortada'] }} width="270" height="210"/>  
+                </div>
+
+                
+
+                <div class="informacion_mapa">
+                    <h3 class="tituloDir_imp"> Dirección </h3>
+                    <p> {{ evento['direccion'] }} </p>   
+                    <br></br>
+                </div>
+
+                <div class="info_final">
+                    <h3 class="precio_imp"> {{ evento['precio'] }}€</h3>
+                </div>
+
+
+                <div id="galeriaFotos">
+                    <h3 class="tituloDir_imp"> Galeria de fotos </h3>
+
+                    <div class="fotosGal">
+                    {% if imagenes %}
+                        {% for i in imagenes %}
+                            <img src={{i.dir}}  width="270" height="210" />
+                         {% endfor %}
+                    {% endif %}
+                    
+                    </div>
+
+
+                </div>
+
+
+                              
+            </section>
+
+
+        {% block footer %}
+
+
+        {% endblock %}
+
+{% endblock %}

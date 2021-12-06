@@ -1,0 +1,105 @@
+{% extends "padre.html" %}
+	
+	{% block titulo %}
+		<title>Mi perfil</title>
+	{% endblock %}
+
+	 {% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/>   
+    {% endblock %}
+	
+	{% block central %}
+		{% if usuario %}
+
+			<div class="formulario">
+					<h3  class="tituloDir">Tipo: {{ usuario['tipo'] }} </h3>
+					<br></br>
+			        <form action="editarUsuario.php" method="post" >
+			            <h3 class="tituloDir">Nombre: </h3>
+			            <input class= "introducirInfo" type="text"  name="nombreNuevo" id="nombreNuevo" maxlength="100" size="60" >
+
+			            <h3 class="tituloDir">Email: </h3>
+			            <input class= "introducirInfo" type="email"  name="emailNuevo" id="emailNuevo" maxlength="100" size="60" >
+
+			            <h3 class="tituloDir">Contraseña: </h3>
+			            <input class= "introducirInfo" type="text" name="passwordNueva" id="passwordNueva" maxlength="100" size="60">
+			            
+			            <input class="botonModificar" type="submit" value="Modificar">
+			            <br></br>
+			         </form>   
+			        
+			</div>
+
+			    {% if msg %}
+					<div id="msg_adv">
+					        {{ msg }}
+					</div>
+				{% endif %}
+
+
+
+
+
+				{% if usuario['tipo'] == "moderador" %}
+
+					<div class="boton">
+				        <form action="moderadorComentarios.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar Comentarios">
+				         </form> 
+			        </div>
+
+				{% endif %}
+
+
+				{% if usuario['tipo'] == "gestor" %}
+
+					<div class="boton">
+				        <form action="moderadorEventos.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar eventos">
+				         </form> 
+			        </div>
+
+				{% endif %}
+
+
+
+				{% if usuario['tipo'] == "superusuario" %}
+
+				<div id= "opSuper">
+					<br></br>
+					<div class="boton">
+					        <form action="moderadorComentarios.php" method="post" >
+					            <input  class="boton" type="submit" value="Gestionar Comentarios">
+					         </form> 
+				        </div>
+
+				        <br></br>
+
+					<div class="boton">
+					        <form action="moderadorEventos.php" method="post" >
+					            <input  class="boton" type="submit" value="Gestionar eventos">
+					         </form> 
+				        </div>
+
+				        <br></br>
+
+					<div class="boton">
+				        <form action="moderadorUsuarios.php" method="post" >
+				            <input  class="boton" type="submit" value="Gestionar usuarios">
+				         </form> 
+			        </div>
+
+			     </div>
+
+				{% endif %}
+
+
+
+		{% endif %}
+
+
+
+
+
+
+	{% endblock %}

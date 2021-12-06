@@ -1,0 +1,157 @@
+<!-- portada.html -->
+<!-- Amanda Moyano Romero grupo 2 -->
+
+<!DOCTYPE html>
+<html>
+
+	<!-- Título e icono de cabecera y parámetros para la adaptación de la página a otros formatos-->
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        {% block titulo %}
+		<title>titulo</title>
+		{% endblock %}
+		 
+		{% block estilo %}
+        <link rel="stylesheet" href="styles/portada.css"/> 
+        {% endblock %}
+
+	    <link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+	    <link rel="icon" type="image/x-icon" href="images/icon.png"  />
+	    <script src="styles/funcionesJavaScript.js"></script>
+	</head>
+
+
+	<body>
+
+	{% block fondo %}
+		<!-- Imagen de fondo-->
+		<style>
+			body{
+			    background-image: url("https://t3.ftcdn.net/jpg/01/41/85/42/360_F_141854213_ivBmQTNalgFOikskzAbds8zjvCqM2Fma.jpg");
+			    background-repeat: repeat;
+			    background-position: center;
+			}
+		</style>
+	{% endblock %}
+
+
+		<div id="formato">
+
+			{% block header %}
+			<!-- Cabecera de la página-->
+			<head id="header">
+
+				<div class="panelInicio">
+					<a href="registro.php" ><h2 class ="botonInicio">REGISTRO / INICIO SESIÓN</h2></a>
+					<a href="logout.php" ><h2 class ="botonInicio">CERRAR SESIÓN</h2></a>
+				</div>
+				
+
+				<!-- Logo-->
+				<div id="logoinicial"> 
+			 		<a href="index.php"> <img  src="images/logo2.gif" width="270" height="210" alt="" /> </a> 
+			 	</div> 
+
+			 	<!-- Título-->
+			 	<div id="headerTitle"> 
+			 		<h1 > Breaking Ceramics </h1> 
+
+			 	</div> 
+
+			 	<!-- Subtítulo-->
+			 	<div id="headerSubtitle">
+		        <p><span class="headline"> 
+		        	Eventos de cerámica en Granada
+		   		 </div>
+				 
+			  	<!-- Menú principal lista tipo ul-->
+			  	<ul id="menu">
+			        <a href="index.php" ><h2 class ="boton">INICIO</h2></a>
+			        <a href="index.php" ><h2 class ="boton">EVENTOS</h2></a>
+			        <a href="index.php" ><h2 class ="boton">FOTOS</h2></a>
+			        <a href="index.php" ><h2 class ="boton">CONTACTO</h2></a>
+			        <a href="perfil.php" ><h2 class ="boton">PERFIL</h2></a>
+			   </ul>
+		    </head>
+
+		    {% endblock %}
+		    
+
+		    <!-- Panel de la izquierda con fecha de eventos-->.
+		    {% block panelIzq %}
+		    <div id="panelIzq">
+
+
+		    	<h2>Enlaces de interés</h2>
+
+					<a href="https://acquaterra.es/index.php/historia-de-la-ceramica/"> Historia de la cerámica </a>
+					<hr class ="lineaPuntos">
+
+					<a href="https://manualidades.facilisimo.com/pintar-jarrones-de-barro_651729.html"> Cómo pintar un jarrón </a>
+					<hr class ="lineaPuntos">
+
+					<a href="https://www.domestika.org/es/blog/3745-materiales-para-hacer-ceramica-en-casa"> Materiales básicos pará cerámica </a>
+					<hr class ="lineaPuntos">
+
+					<a href="https://okdiario.com/howto/como-hacer-taza-barro-4241928"> Cómo hacer una taza </a>
+					<hr class ="lineaPuntos">
+
+					<a href="https://okdiario.com/howto/como-hacer-taza-barro-4241928"> Cómo hacer una taza </a>
+					<hr class ="lineaPuntos">
+			
+		    	</div>
+		    {% endblock %}
+
+
+
+		    <!-- Panel principal -->
+		  	<div class=panelPrincipal>
+		  	{% block central %}
+      	
+		      	<p>Parte central de la plantilla</p>
+		      
+		   	{% endblock %}
+		  	</div>
+
+		{% block footer %}
+		  <!-- Flecha para volver al principio de la página -->
+		  <a href="#top" class="arriba"><p align=center><strong><img  src="images/arrow1.png" width="170" height="100" alt="" /></strong></a></p>
+
+
+		  <!-- Footer con redes sociales y contacto -->
+		  <div id="footer">
+		    <p><a href="index.php">Inicio</a> | <a href="index.php">Eventos</a> | <a href="index.php">Fotos</a> | <a href="index.php">Contacto</a> <br/></a></p>
+		      
+
+
+			  <div id= "redes">
+				<a href="http://www.facebook.com" target="_blank"><img alt="Facebook" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" title="Facebook" id="facebook"/></a>
+				<a href="http://twitter.com" target="_blank"><img alt="Twitter" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" title="Twitter" id="twitter" /></a>
+				<a href="https://instagram.com/" target="_blank"><img alt="Instagram" src="https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-png-instagram-logo-camel-productions-website-25.png" title="Instagram" id="instagram" /></a>
+
+			  </div>
+
+			<div id="contacto">
+
+		        <h3 id="contactanos"> Contáctanos</h3>
+		        <h3 id="telefono"> Teléfono: +34 958206589 </h3>
+
+		        <a href="mailto:breakingceramics@info.com  "> breakingceramics@info.com  </a>
+		        <a href="" target="_blank"><span><span></span></span></a>
+
+		      
+			</div>
+
+			  <div id= "licencia">
+			  	<h3> Breaking Ceramics 2021. Todos los derechos son reservados </h3>
+		      </div>
+
+
+			</div>
+
+		{% endblock %}
+		</div>
+	</body>
+</html>
